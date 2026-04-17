@@ -2,8 +2,28 @@
 
 ## Install
 
-1. Download and install from [ollama.com/download](https://ollama.com/download).
-2. Ensure the daemon is running (menu bar app on macOS, or `ollama serve`).
+### Option A: Homebrew (macOS, common)
+
+With [Homebrew](https://brew.sh/) you can use either the **CLI formula** or the **desktop app cask** (menu bar). Both are valid; many people use the cask for the same “app + auto-updates” experience as the website.
+
+```bash
+brew update
+# CLI (ollama binary; start with `ollama serve` when needed)
+brew install ollama
+
+# OR desktop app + menu bar daemon (often nicer on macOS)
+brew install --cask ollama
+```
+
+Verify the binary exists:
+
+```bash
+ollama --version
+```
+
+### Option B: Official installer
+
+Download from [ollama.com/download](https://ollama.com/download), then ensure the daemon is running (menu bar app on macOS, or `ollama serve`).
 
 ## Verify
 
