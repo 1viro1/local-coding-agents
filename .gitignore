@@ -1,0 +1,16 @@
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.json5
+secrets/
+*.pem
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log

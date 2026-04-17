@@ -1,0 +1,33 @@
+// EXAMPLE ONLY — merge into ~/.openclaw/openclaw.json (or use `openclaw onboard`).
+// Replace GATEWAY_TOKEN_PLACEHOLDER with a strong secret, e.g.:
+//   openssl rand -hex 32
+// Do NOT commit real tokens to git.
+
+{
+  gateway: {
+    mode: "local",
+    port: 18789,
+    bind: "loopback",
+    auth: {
+      mode: "token",
+      token: "GATEWAY_TOKEN_PLACEHOLDER",
+    },
+  },
+
+  // Local Ollama: export OLLAMA_API_KEY=ollama-local in your environment for simplest discovery.
+  // Or set env here (still do not commit real cloud keys):
+  env: {
+    OLLAMA_API_KEY: "ollama-local",
+  },
+
+  agents: {
+    defaults: {
+      workspace: "~/.openclaw/workspace",
+      model: {
+        primary: "ollama/qwen2.5-coder:14b",
+        // Optional fallbacks once pulled:
+        // fallbacks: ["ollama/qwen2.5-coder:7b"],
+      },
+    },
+  },
+}
